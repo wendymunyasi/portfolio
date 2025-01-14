@@ -5,11 +5,117 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wendy M</title>
-  <link rel="stylesheet" href="./assets/css/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Font awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/custom-css/index.css">
 </head>
 
 <body>
+
+  <!-- start of header -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom px-5">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link mx-3" href="#home">Home</a>
+            <a class="nav-link mx-3" href="#about_me">About Me</a>
+            <a class="nav-link mx-3" href="#skills">Skills</a>
+            <a class="nav-link mx-3" href="#projects">Projects</a>
+            <a class="nav-link mx-3" href="#contact_me">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- end of header -->
+
+  <!-- start of hero section -->
+  <section class="hero">
+    <h1>Full-Stack Developer <br><span>Building Digital Solutions</span></h1>
+    <p>Transforming ideas into elegant, scalable, and efficient applications</p>
+    <div class="hero-buttons">
+      <a href="#projects" class="primary-btn">View Projects</a>
+      <a href="#contact" class="secondary-btn">Contact Me</a>
+    </div>
+  </section>
+  <!-- end of hero section -->
+
+  <!-- start of about section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Column: Description -->
+        <div class="col-lg-6">
+          <h2 class="about-title">About <span>Me</span></h2>
+          <p class="about-description">
+            Passionate software developer with expertise in building modern web applications.
+            Focused on creating clean, efficient, and scalable solutions that solve real-world problems.
+          </p>
+        </div>
+
+        <!-- Right Column: Feature Cards -->
+        <div class="col-lg-6">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="feature-card text-center">
+                <div class="feature-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <h3 class="feature-title">Clean Code</h3>
+                <p class="feature-description">Writing maintainable and efficient code</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-card text-center">
+                <div class="feature-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="feature-title">Responsive</h3>
+                <p class="feature-description">Mobile-first approach to design</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-card text-center">
+                <div class="feature-icon">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="feature-title">Performance</h3>
+                <p class="feature-description">Optimized for speed and efficiency</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-card text-center">
+                <div class="feature-icon">
+                  <i class="fas fa-lock"></i>
+                </div>
+                <h3 class="feature-title">Security</h3>
+                <p class="feature-description">Following best security practices</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of about section -->
+
+
+  <!-- Scripts -->
+
+  <!-- Bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
 </body>
 
