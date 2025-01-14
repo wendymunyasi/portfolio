@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* outline: 1px solid red !important; */
+  overflow-x: hidden;
+}
