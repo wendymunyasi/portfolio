@@ -60,6 +60,10 @@ section .section-title span {
   font-weight: bold;
 }
 
+.navbar-nav a.nav-link.active {
+  color: #f3a40a;
+}
+
 a.navbar-brand {
   color: #f3a40a;
   font-weight: bold;
@@ -67,6 +71,10 @@ a.navbar-brand {
 
 .navbar-nav a:hover {
   color: #f3a40a;
+}
+
+span.navbar-toggler-icon {
+  background-image: url("../../img/navbar-toggler.svg");
 }
 /* end of navbar */
 
@@ -85,6 +93,10 @@ a.navbar-brand {
 .hero-content h1 {
   color: #f0f0f0;
   font-weight: bold;
+}
+
+.hero-content p {
+  color: #f0f0f0;
 }
 
 .hero-content h1 span {
@@ -136,6 +148,20 @@ a.navbar-brand {
   max-width: 100%;
   border-radius: 100%;
   /* filter: hue-rotate(200deg); */
+  height: auto;
+}
+
+/* Scroll Down Animation */
+.scroll-down-animation {
+  position: absolute;
+  bottom: 20px; /* Adjust this value to control the distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.scroll-down-animation video {
+  width: 50px; /* Adjust the size of the animation */
   height: auto;
 }
 
