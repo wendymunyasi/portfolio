@@ -79,7 +79,7 @@ span.navbar-toggler-icon {
 /* end of navbar */
 
 /* hero section*/
-#hero-section {
+.hero-section {
   height: 100vh;
   display: flex;
   align-items: center;
