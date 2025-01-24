@@ -33,6 +33,10 @@ section .section-title span {
   color: #f3a40a;
 }
 
+.icons {
+  color: #f3a40a;
+}
+
 .btn-xs {
   padding: 0.25rem 0.5rem;
   font-size: 0.85rem;
@@ -59,6 +63,10 @@ section .section-title span {
 a.navbar-brand {
   color: #f3a40a;
   font-weight: bold;
+}
+
+.navbar-nav a:hover {
+  color: #f3a40a;
 }
 /* end of navbar */
 
@@ -183,7 +191,6 @@ a.navbar-brand {
 }
 
 .feature-icon {
-  color: #f3a40a;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -253,7 +260,6 @@ a.navbar-brand {
 
 .skill-card i {
   font-size: 2.5rem;
-  color: #f3a40a;
   margin-bottom: 10px;
 }
 
@@ -311,6 +317,22 @@ a.navbar-brand {
   padding: 5px 10px;
   font-size: 0.85rem;
   margin-right: 5px;
+}
+
+.shadow {
+  max-width: 400px;
+  width: 100%;
+}
+
+.list-group-item {
+  background-color: inherit; /* Inherit the card's background color */
+  color: inherit; /* Inherit the card's text color */
+  border: none;
+}
+
+.list-group-item a {
+  text-decoration: none;
+  color: #f3a40a;
 }
 /* end of projects section */
 
@@ -373,9 +395,9 @@ a.navbar-brand {
 }
 
 .social-icons a {
-  color: #f3a40a;
   margin-right: 10px;
   font-size: 1.5rem;
+  text-decoration: none;
 }
 /* end of contact section */
 
