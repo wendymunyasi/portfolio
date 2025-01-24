@@ -303,7 +303,7 @@ span.navbar-toggler-icon {
 /* end of skills section */
 
 /* projects section */
-#projects-section {
+.projects-section {
   padding: 3rem 0;
   background-color: #393939;
 }
