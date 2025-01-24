@@ -133,7 +133,7 @@ a.navbar-brand {
 
 .hero-image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 100%;
   border-radius: 100%;
   /* filter: hue-rotate(200deg); */
   height: auto;
@@ -146,6 +146,10 @@ a.navbar-brand {
 
   .hero-subtitle {
     font-size: 3rem;
+  }
+
+  .hero-image img {
+    max-width: 500px; /* Restrict the image size on larger screens */
   }
 }
 /* end of hero section */
