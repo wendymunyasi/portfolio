@@ -177,7 +177,7 @@ span.navbar-toggler-icon {
 /* end of hero section */
 
 /* about section */
-#about-section {
+.about-section {
   padding: 2rem 0;
   /* min-height: 100vh; */
   display: flex;
