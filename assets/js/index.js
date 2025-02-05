@@ -45,7 +45,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
   try {
     // Send the data to the Django API
-    const response = await fetch('http://127.0.0.1:8080/api/submit/', {
+    const response = await fetch('https://portfolio-emails-api.onrender.com/api/submit/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
