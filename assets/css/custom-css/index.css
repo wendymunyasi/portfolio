@@ -420,6 +420,10 @@ span.navbar-toggler-icon {
   background-color: #ffc107;
 }
 
+i.fa-paper-plane {
+  color: #222220;
+}
+
 .social-icons a {
   margin-right: 0.62rem;
   font-size: 1.5rem;
@@ -434,6 +438,21 @@ span.navbar-toggler-icon {
   /* padding: 0.62rem 1.25rem; */
   /* font-size: 1rem; */
   cursor: pointer;
+}
+
+#spinner {
+  position: fixed; /* Fix the spinner to the viewport */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  /* transform: translate(-50%, -50%); Adjust for the spinner's size */
+  z-index: 9999; /* Ensure it appears above other elements */
+  color: #f3a40a !important; /* Change the spinner color (Bootstrap uses currentColor) */
+}
+
+.spinner-border {
+  width: 3rem; /* Adjust size if needed */
+  height: 3rem;
+  border-width: 0.3rem; /* Adjust thickness */
 }
 /* end of contact section */
 

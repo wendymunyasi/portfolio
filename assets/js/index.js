@@ -27,6 +27,10 @@ navLinks.forEach(link => {
 document.getElementById('contactForm').addEventListener('submit', async function (e) {
   e.preventDefault(); // Prevent the default form submission
 
+  // Show the spinner
+  const spinner = document.getElementById('spinner');
+  spinner.style.display = 'inline-block';
+
   // Get form data
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
@@ -58,6 +62,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
       const result = await response.json();
       modalMessage.textContent = result.message; // Set success message
       modal.show(); // Show the modal
+
+      // Clear the form after successful submission
+      document.getElementById('contactForm').reset();
     } else {
       const errorData = await response.json();
       console.error('Error:', errorData);
@@ -75,6 +82,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
     // Display a generic error message in the modal
     modalMessage.textContent = 'An error occurred. Please try again later.';
     modal.show(); // Show the modal
+  } finally {
+    // Hide the spinner after the process is complete
+    spinner.style.display = 'none';
   }
 });
 
