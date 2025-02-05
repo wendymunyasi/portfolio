@@ -409,7 +409,7 @@ span.navbar-toggler-icon {
 
 .contact-form button {
   background-color: #f3a40a;
-  color: #ffffff;
+  color: black;
   border: none;
   border-radius: 5px;
   padding: 0.62rem 1.25rem;
@@ -424,6 +424,16 @@ span.navbar-toggler-icon {
   margin-right: 0.62rem;
   font-size: 1.5rem;
   text-decoration: none;
+}
+
+.btn-modal {
+  background-color: #f3a40a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  /* padding: 0.62rem 1.25rem; */
+  /* font-size: 1rem; */
+  cursor: pointer;
 }
 /* end of contact section */
 
