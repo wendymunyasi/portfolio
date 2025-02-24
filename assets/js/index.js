@@ -24,67 +24,55 @@ navLinks.forEach(link => {
 
 
 // Add form submission event listener
-document.getElementById('contactForm').addEventListener('submit', async function (e) {
-  e.preventDefault(); // Prevent the default form submission
+// Initialize EmailJS with your Public Key from the environment variable
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY); // Replace with your .env variable
+
+function sendEmail(event) {
+  event.preventDefault(); // Prevent the default form submission
 
   // Show the spinner
-  const spinner = document.getElementById('spinner');
-  spinner.style.display = 'inline-block';
+  document.getElementById("spinner").style.display = "block";
 
-  // Get form data
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const projectDescription = document.getElementById('message').value;
-
-  // Prepare the data to send
+  // Collect form data
+  const form = document.getElementById("contactForm");
   const formData = {
-    name: name,
-    email: email,
-    project_description: projectDescription
+    name: form.name.value,
+    email: form.email.value,
+    project_description: form.project_description.value,
   };
 
-  try {
-    // Send the data to the Django API
-    const response = await fetch('https://portfolio-emails-api.onrender.com/api/submit/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
+  // Send the email using EmailJS
+  emailjs
+    .send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID, // Service ID from .env
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Template ID from .env
+      formData
+    )
+    .then((response) => {
+      console.log("SUCCESS!", response.status, response.text);
+
+      // Hide the spinner
+      document.getElementById("spinner").style.display = "none";
+
+      // Show success message in the modal
+      document.getElementById("responseModalLabel").innerText = "Success!";
+      document.getElementById("modalMessage").innerText =
+        "Your message has been sent successfully!";
+      new bootstrap.Modal(document.getElementById("responseModal")).show();
+
+      // Reset the form
+      form.reset();
+    })
+    .catch((error) => {
+      console.error("FAILED...", error);
+
+      // Hide the spinner
+      document.getElementById("spinner").style.display = "none";
+
+      // Show error message in the modal
+      document.getElementById("responseModalLabel").innerText = "Error!";
+      document.getElementById("modalMessage").innerText =
+        "Something went wrong. Please try again later.";
+      new bootstrap.Modal(document.getElementById("responseModal")).show();
     });
-
-    // Reference to the modal elements
-    const modal = new bootstrap.Modal(document.getElementById('responseModal'));
-    const modalMessage = document.getElementById('modalMessage');
-
-    // Handle the response
-    if (response.ok) {
-      const result = await response.json();
-      modalMessage.textContent = result.message; // Set success message
-      modal.show(); // Show the modal
-
-      // Clear the form after successful submission
-      document.getElementById('contactForm').reset();
-    } else {
-      const errorData = await response.json();
-      console.error('Error:', errorData);
-      modalMessage.textContent = errorData.message || 'Failed to send message. Please try again.';
-      modal.show(); // Show the modal
-    }
-  } catch (error) {
-    // Handle both HTTP and network errors here
-    console.error('Error:', error);
-
-    // Reference to the modal elements
-    const modal = new bootstrap.Modal(document.getElementById('responseModal'));
-    const modalMessage = document.getElementById('modalMessage');
-
-    // Display a generic error message in the modal
-    modalMessage.textContent = 'An error occurred. Please try again later.';
-    modal.show(); // Show the modal
-  } finally {
-    // Hide the spinner after the process is complete
-    spinner.style.display = 'none';
-  }
-});
-
+}

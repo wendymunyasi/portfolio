@@ -388,7 +388,7 @@
       <div class="row align-tems-center py-5">
         <!-- start of form -->
         <div class="contact-form col-lg-6 order-1 order-lg-2">
-          <form id="contactForm">
+          <form id="contactForm" onsubmit="sendEmail(event)">
             <div class="mb-3">
               <label for="name" class="form-label">
                 <i class="fas fa-user icons"></i> Name
@@ -479,6 +479,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <!-- Email JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <!-- my script -->
   <script src="./assets/js/index.js"></script>
 </body>
