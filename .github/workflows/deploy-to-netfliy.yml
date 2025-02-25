@@ -1,0 +1,25 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Deploy to Netlify
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v2.0.1
+        with:
+          publish-dir: ./ # Root directory of your project
+          production-deploy: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

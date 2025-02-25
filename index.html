@@ -388,7 +388,7 @@
       <div class="row align-tems-center py-5">
         <!-- start of form -->
         <div class="contact-form col-lg-6 order-1 order-lg-2">
-          <form id="contactForm" onsubmit="sendEmail(event)">
+          <form id="contactForm">
             <div class="mb-3">
               <label for="name" class="form-label">
                 <i class="fas fa-user icons"></i> Name
@@ -405,8 +405,8 @@
               <label for="message" class="form-label">
                 <i class="fas fa-comment icons"></i> Project Description
               </label>
-              <textarea class="form-control" id="message" rows="5" name="project_description" placeholder="Your Message"
-                required></textarea>
+              <textarea class="form-control" id="project_description" rows="5" name="project_description"
+                placeholder="Your Message" required></textarea>
             </div>
             <div class="text-center">
               <button type="submit" class="btn btn-primary w-100">
