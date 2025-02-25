@@ -16,8 +16,7 @@ jobs:
 
       # Step 2: Deploy to Netlify
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v2.0.1
-        with:
+        uses: nwtgck/actions-netlify@v1.2.3 # Correct version        with:
           publish-dir: ./ # Root directory of your project
           production-deploy: true
         env:
