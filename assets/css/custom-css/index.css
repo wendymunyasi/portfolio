@@ -328,11 +328,11 @@ span.navbar-toggler-icon {
   padding: 1.25rem;
 }
 
-.project-card .card-title {
+.project-card .card-title, h6 {
   color: #f0f0f0;
 }
 
-.project-card .card-text {
+.project-card .card-text, li {
   color: #9ca3af;
 }
 
